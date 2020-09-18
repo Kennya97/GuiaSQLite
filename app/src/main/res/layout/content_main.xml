@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fondoinicio"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+ <TextView
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:text="DATOS DEL ARTICULO"
+     android:textAlignment="center"
+     android:layout_gravity="center"
+     android:layout_marginTop="20dp"
+     android:textSize="26dp"
+     android:textColor="#FFFFFF"
+     android:textStyle="bold"
+     android:fontFamily="serif-monospace"
+     />
+
+    <ScrollView
+   android:layout_width="match_parent"
+   android:layout_height="match_parent">
+
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:src="@mipmap/cc_foreground" />
+
+        <EditText
+            android:id="@+id/ed_cod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingrese el código"
+            android:inputType="number"
+            android:shadowRadius="2"
+            android:shadowColor="#2196F3"
+            android:background="#fff"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="25dp"
+            android:drawableStart="@drawable/ic_baseline_format_list_bulleted_24"
+            android:padding="5dp"
+            />
+
+        <EditText
+            android:id="@+id/ed_des"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingrese la descripción del articulo"
+            android:background="#fff"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="25dp"
+            android:drawableStart="@drawable/texto"
+            android:padding="5dp"
+
+            />
+
+
+        <EditText
+            android:id="@+id/ed_pre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingrese el precio del articulo"
+            android:background="#fff"
+            android:inputType="numberDecimal"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="25dp"
+            android:drawableStart="@drawable/ic_baseline_attach_money_24"
+            android:padding="5dp"
+
+            />
+
+        <Button
+            android:id="@+id/guardar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="5dp"
+            android:drawableRight="@drawable/save"
+            android:onClick="alta"
+            android:text="Guardar"
+            android:background="@drawable/color"
+            android:paddingRight="20dp"
+            android:textColor="#fff"
+            />
+
+        <Button
+            android:id="@+id/concod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="5dp"
+            android:drawableRight="@drawable/buscar"
+            android:onClick="consultaporcodigo"
+            android:text="Consulta por código"
+            android:background="@drawable/color"
+            android:paddingRight="20dp"
+            android:textColor="#fff" />
+
+        <Button
+            android:id="@+id/condes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="5dp"
+            android:drawableRight="@drawable/descripcion"
+            android:onClick="consultapordescripcion"
+            android:text="Consulta por descripción"
+            android:background="@drawable/color"
+            android:paddingRight="20dp"
+            android:textColor="#fff" />
+
+        <Button
+            android:id="@+id/borrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="5dp"
+            android:drawableRight="@drawable/borrar"
+            android:onClick="bajaporcodigo"
+            android:text="borrar"
+            android:background="@drawable/color"
+            android:paddingRight="20dp"
+            android:textColor="#fff" />
+
+        <Button
+            android:id="@+id/editar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="5dp"
+            android:drawableRight="@drawable/editar"
+            android:onClick="modificacion"
+            android:text="Editar"
+            android:background="@drawable/color"
+            android:paddingRight="20dp"
+            android:textColor="#fff" />
+
+
+    </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

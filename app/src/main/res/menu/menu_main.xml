@@ -1,0 +1,37 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.myapplication.MainActivity">
+
+
+
+
+    <item
+        android:id="@+id/action_listaArticulos"
+        android:orderInCategory="2"
+        android:title="Lista Articulos"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_listaArticulos1"
+        android:orderInCategory="3"
+        android:title="Lista Articulos"
+        app:showAsAction="never" />
+
+
+    <item
+        android:id="@+id/acerca"
+        android:orderInCategory="4"
+        android:title="Acerca de"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/volver"
+        android:orderInCategory="5"
+        android:title="Volver"
+        app:showAsAction="always"
+        android:icon="@drawable/volver"
+        />
+
+
+</menu>
