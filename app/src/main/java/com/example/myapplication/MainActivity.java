@@ -176,22 +176,22 @@ dialogo.show();
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
         //noinspection SimplifiableIfStatement
        /* if (id == R.id.action_limpiar){
             ed_cod.setText(null);
             ed_des.setText(null);
             ed_pre.setText(null);
+            return true;
+        }else */
 
-
+        if(id==R.id.volver) {
+            Intent spinnerActivity = new Intent(MainActivity.this, MainActivity.class);
+            startActivity(spinnerActivity);
             return true;
 
 
-        }else */if(id==R.id.action_listaArticulos) {
+        }else if(id==R.id.action_listaArticulos) {
             Intent spinnerActivity = new Intent(MainActivity.this, consulta_spinner.class);
             startActivity(spinnerActivity);
             return true;
@@ -218,7 +218,16 @@ dialogo.show();
             return true;
 
 
+        }else if(id==R.id.recycler){
+            //Acciones a realizar
+            //Toast.makeText (this, "Has echo clic en opcion recyclerview", Toast.LENGTH_LONG).show();
+
+            Intent listViewActivity = new Intent(MainActivity.this, consulta_recyclerView.class);
+            startActivity(listViewActivity);
+            return true;
+
         }
+
 
         return super.onOptionsItemSelected(item);
     }

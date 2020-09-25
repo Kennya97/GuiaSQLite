@@ -32,23 +32,6 @@ public class consulta_spinner extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_consulta_spinner);
 
-
-        /*ed_cod = (EditText) findViewById(R.id.ed_cod);
-        ed_des = (EditText) findViewById(R.id.ed_des);
-        ed_pre = (EditText) findViewById(R.id.ed_pre);
-        guardar = (Button) findViewById(R.id.guardar);
-        concod = (Button) findViewById(R.id.concod);
-        condes = (Button) findViewById(R.id.condes);
-        borrar = (Button) findViewById(R.id.borrar);
-        editar = (Button) findViewById(R.id.editar);*/
-
-
-
-
-
-
-
-
         sp_options = (Spinner) findViewById(R.id.sp_options);
         tv_cod = (TextView) findViewById(R.id.tv_cod);
         tv_descripcion = (TextView) findViewById(R.id.tv_descripcion);
@@ -65,13 +48,13 @@ public class consulta_spinner extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
 
                 if (position != 0) {
-                    tv_cod.setText("Código: " + conexion.consultaListaArticulos().get(position - 1).getCodigo());
-                    tv_descripcion.setText("Descripción: " + conexion.consultaListaArticulos().get(position - 1).getDescripcion());
-                    tv_precio.setText("Precio: " + String.valueOf(conexion.consultaListaArticulos().get(position - 1).getPrecio()));
+                    tv_cod.setText("" + conexion.consultaListaArticulos().get(position - 1).getCodigo());
+                    tv_descripcion.setText("" + conexion.consultaListaArticulos().get(position - 1).getDescripcion());
+                    tv_precio.setText("" + String.valueOf(conexion.consultaListaArticulos().get(position - 1).getPrecio()));
                 } else {
-                    tv_cod.setText("Código: ");
-                    tv_descripcion.setText("Descripción: ");
-                    tv_precio.setText("Precio: ");
+                    tv_cod.setText("");
+                    tv_descripcion.setText("");
+                    tv_precio.setText("");
                 }
 
 
@@ -85,6 +68,7 @@ public class consulta_spinner extends AppCompatActivity {
     }
 
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -92,25 +76,22 @@ public class consulta_spinner extends AppCompatActivity {
         return true;
     }
 
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-
-        if (id == R.id.volver){
-
-            //Acciones a realizar
-            //Toast.makeText (this, "Has echo clic en opcion acerca", Toast.LENGTH_LONG).show();
-
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
-
-
+        //noinspection SimplifiableIfStatement
+       /* if (id == R.id.action_limpiar){
+            ed_cod.setText(null);
+            ed_des.setText(null);
+            ed_pre.setText(null);
             return true;
+        }else */
+
+        if(id==R.id.volver) {
+            Intent spinnerActivity = new Intent(consulta_spinner.this, MainActivity.class);
+            startActivity(spinnerActivity);
+            return true;
+
 
         }else if(id==R.id.action_listaArticulos) {
             Intent spinnerActivity = new Intent(consulta_spinner.this, consulta_spinner.class);
@@ -139,13 +120,19 @@ public class consulta_spinner extends AppCompatActivity {
             return true;
 
 
+        }else if(id==R.id.recycler){
+            //Acciones a realizar
+            //Toast.makeText (this, "Has echo clic en opcion recyclerview", Toast.LENGTH_LONG).show();
 
-    }
+            Intent listViewActivity = new Intent(consulta_spinner.this, consulta_recyclerView.class);
+            startActivity(listViewActivity);
+            return true;
+
+        }
 
 
         return super.onOptionsItemSelected(item);
     }
-
 
 
 }

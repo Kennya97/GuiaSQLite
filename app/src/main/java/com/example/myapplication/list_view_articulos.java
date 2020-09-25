@@ -42,14 +42,6 @@ public class list_view_articulos extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_view_articulos);
 
-      /*  ed_cod = (EditText) findViewById(R.id.ed_cod);
-        ed_des = (EditText) findViewById(R.id.ed_des);
-        ed_pre = (EditText) findViewById(R.id.ed_pre);
-        guardar = (Button) findViewById(R.id.guardar);
-        concod = (Button) findViewById(R.id.concod);
-        condes = (Button) findViewById(R.id.condes);
-        borrar = (Button) findViewById(R.id.borrar);
-        editar = (Button) findViewById(R.id.editar);*/
 
 
         listViewPersonas = (ListView) findViewById(R.id.listViewPersonas);
@@ -101,25 +93,15 @@ public class list_view_articulos extends AppCompatActivity {
         return true;
     }
 
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-
-        if (id == R.id.volver){
-
-            //Acciones a realizar
-            //Toast.makeText (this, "Has echo clic en opcion acerca", Toast.LENGTH_LONG).show();
-
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
-
-
+        if(id==R.id.volver) {
+            Intent spinnerActivity = new Intent(list_view_articulos.this, MainActivity.class);
+            startActivity(spinnerActivity);
             return true;
+
 
         }else if(id==R.id.action_listaArticulos) {
             Intent spinnerActivity = new Intent(list_view_articulos.this, consulta_spinner.class);
@@ -137,6 +119,8 @@ public class list_view_articulos extends AppCompatActivity {
 
         }else if(id==R.id.acerca){
 
+            //Acciones a realizar
+            //Toast.makeText (this, "Has echo clic en opcion acerca", Toast.LENGTH_LONG).show();
 
             Intent intent = new Intent(this, datos.class);
             startActivity(intent);
@@ -146,8 +130,15 @@ public class list_view_articulos extends AppCompatActivity {
             return true;
 
 
-        }
+        }else if(id==R.id.recycler){
+            //Acciones a realizar
+            //Toast.makeText (this, "Has echo clic en opcion recyclerview", Toast.LENGTH_LONG).show();
 
+            Intent listViewActivity = new Intent(list_view_articulos.this, consulta_recyclerView.class);
+            startActivity(listViewActivity);
+            return true;
+
+        }
 
 
         return super.onOptionsItemSelected(item);

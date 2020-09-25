@@ -9,7 +9,7 @@
     <item
         android:id="@+id/action_listaArticulos"
         android:orderInCategory="2"
-        android:title="Lista Articulos"
+        android:title="Lista Articulos Spinner"
         app:showAsAction="never" />
 
     <item
@@ -31,6 +31,13 @@
         android:title="Volver"
         app:showAsAction="always"
         android:icon="@drawable/volver"
+        />
+    <item
+        android:id="@+id/recycler"
+        android:orderInCategory="6"
+        android:title="Recycler"
+        app:showAsAction="never"
+
         />
 
 

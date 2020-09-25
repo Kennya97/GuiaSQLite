@@ -19,23 +19,11 @@ public class detalle_articulos extends AppCompatActivity {
     private TextView tv_codigo, tv_descripcion, tv_precio;
     private TextView tv_codigo1, tv_descripcion1, tv_precio1, tv_fecha;
 
-    // private EditText ed_cod, ed_des, ed_pre;
-    //  private Button guardar, concod,condes, borrar,editar;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalle_articulos);
-
-       /* ed_cod = (EditText) findViewById(R.id.ed_cod);
-        ed_des = (EditText) findViewById(R.id.ed_des);
-        ed_pre = (EditText) findViewById(R.id.ed_pre);
-        guardar = (Button) findViewById(R.id.guardar);
-        concod = (Button) findViewById(R.id.concod);
-        condes = (Button) findViewById(R.id.condes);
-        borrar = (Button) findViewById(R.id.borrar);
-        editar = (Button) findViewById(R.id.editar);*/
 
 
         tv_codigo = (TextView) findViewById(R.id.tv_codigo);
@@ -73,6 +61,7 @@ public class detalle_articulos extends AppCompatActivity {
     }
 
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -80,24 +69,56 @@ public class detalle_articulos extends AppCompatActivity {
         return true;
     }
 
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+        //noinspection SimplifiableIfStatement
+       /* if (id == R.id.action_limpiar){
+            ed_cod.setText(null);
+            ed_des.setText(null);
+            ed_pre.setText(null);
+            return true;
+        }else */
+
+        if(id==R.id.volver) {
+            Intent spinnerActivity = new Intent(detalle_articulos.this, MainActivity.class);
+            startActivity(spinnerActivity);
+            return true;
 
 
-        if (id == R.id.volver){
+        }else if(id==R.id.action_listaArticulos) {
+            Intent spinnerActivity = new Intent(detalle_articulos.this, consulta_spinner.class);
+            startActivity(spinnerActivity);
+            return true;
+
+
+        }else if(id==R.id.action_listaArticulos1){
+
+            Intent listViewActivity = new Intent(detalle_articulos.this, list_view_articulos.class);
+            startActivity(listViewActivity);
+            return true;
+
+
+
+        }else if(id==R.id.acerca){
 
             //Acciones a realizar
             //Toast.makeText (this, "Has echo clic en opcion acerca", Toast.LENGTH_LONG).show();
 
-            Intent intent = new Intent(this, MainActivity.class);
+            Intent intent = new Intent(this, datos.class);
             startActivity(intent);
 
 
+
+            return true;
+
+
+        }else if(id==R.id.recycler){
+            //Acciones a realizar
+            //Toast.makeText (this, "Has echo clic en opcion recyclerview", Toast.LENGTH_LONG).show();
+
+            Intent listViewActivity = new Intent(detalle_articulos.this, consulta_recyclerView.class);
+            startActivity(listViewActivity);
             return true;
 
         }

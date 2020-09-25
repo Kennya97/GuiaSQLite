@@ -36,37 +36,91 @@
         android:spinnerMode="dropdown"
 
         />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="40dp"
         >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CÓDIGO"
+            android:gravity="center"
+            android:textColor="#AF0B9E"
+            android:textSize="28dp"
+            android:textAlignment="center"
+            android:fontFamily="serif"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="78dp"
+            android:background="@drawable/fondito"
+            />
+
+
 
         <TextView
             android:id="@+id/tv_cod"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Código: "
-            android:textColor="#AF0B9E"
-            android:textSize="22dp"
+            android:gravity="center"
+            android:textColor="#121112"
+            android:textSize="20dp"
+            android:textAlignment="center"
             android:fontFamily="serif"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="125dp"
             android:background="@drawable/fondito"
-
             />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DESCRIPCIÓN "
+            android:gravity="center"
+            android:textColor="#AF0B9E"
+            android:textSize="28dp"
+            android:textAlignment="center"
+            android:fontFamily="serif"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="179dp"
+            android:background="@drawable/fondito"
+            />
+
         <TextView
             android:id="@+id/tv_descripcion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Descripción: "
-            android:textColor="#AF0B9E"
-            android:textSize="22dp"
+            android:textColor="#121112"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="20dp"
             android:fontFamily="serif"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
-            android:layout_marginTop="55dp"
+            android:layout_marginTop="225dp"
+            android:background="@drawable/fondito"
+            />
+
+
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PRECIO"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:fontFamily="serif"
+            android:textColor="#AF0B9E"
+            android:textSize="28dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="269dp"
             android:background="@drawable/fondito"
             />
 
@@ -74,13 +128,14 @@
             android:id="@+id/tv_precio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Precio:  "
             android:fontFamily="serif"
-            android:textColor="#AF0B9E"
-            android:textSize="22dp"
+            android:textColor="#121112"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="20dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
-            android:layout_marginTop="98dp"
+            android:layout_marginTop="315dp"
             android:background="@drawable/fondito"
             />
     </RelativeLayout>
