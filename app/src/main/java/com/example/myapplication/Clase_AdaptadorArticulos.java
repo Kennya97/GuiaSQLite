@@ -39,7 +39,7 @@ public class Clase_AdaptadorArticulos extends RecyclerView.Adapter<Clase_Adaptad
         holder.textViewCodigo1.setText(String.valueOf(dto.getCodigo()));
         holder.textViewDescripcion1.setText(dto.getDescripcion());
         holder.textViewPrecio1.setText(String.valueOf(dto.getPrecio()));
-        holder.textViewOtro.setText(String.valueOf("Registro #:" + (position+1)));
+       // holder.textViewOtro.setText(String.valueOf("Registro #:" + (position+1)));
 
     }
 
@@ -50,7 +50,7 @@ public class Clase_AdaptadorArticulos extends RecyclerView.Adapter<Clase_Adaptad
     }
 
     public static class ArticulosViewHolder extends RecyclerView.ViewHolder {
-        TextView textViewCodigo1, textViewDescripcion1, textViewPrecio1, textViewOtro;
+        TextView textViewCodigo1, textViewDescripcion1, textViewPrecio1;
         //ImageView imageView;
 
         public ArticulosViewHolder(View itemView) {
@@ -58,7 +58,7 @@ public class Clase_AdaptadorArticulos extends RecyclerView.Adapter<Clase_Adaptad
             textViewCodigo1 = itemView.findViewById(R.id.textViewCodigo1);
             textViewDescripcion1 = itemView.findViewById(R.id.textViewDescripcion1);
             textViewPrecio1= itemView.findViewById(R.id.textViewPrecio1);
-            textViewOtro = itemView.findViewById(R.id.textViewOtro);
+            //textViewOtro = itemView.findViewById(R.id.textViewOtro);
             //imageView = itemView.findViewById(R.id.imageView);
         }
     }

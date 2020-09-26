@@ -2,8 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/color_recy"
-    android:layout_margin="2dp"
+    android:layout_margin="4dp"
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
@@ -25,13 +24,14 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="4dp">
+            android:padding="4dp"
+            android:background="@drawable/color_recy">
 
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="120dp"
                 android:layout_height="145dp"
-                android:src="@mipmap/flechaimg_foreground"
+                android:src="@mipmap/fucsia_foreground"
                 android:padding="0dp" />
 
             <TextView
@@ -42,7 +42,6 @@
                 android:layout_toRightOf="@id/imageView"
                 android:text="Código: "
                 android:textSize="19dp"
-                android:background="@color/colorPrimary"
                 android:textStyle="bold"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
                 android:textColor="#ffffff" />
@@ -73,7 +72,6 @@
                 android:paddingRight="15dp"
                 android:text="Descripción"
                 android:textSize="19dp"
-                android:background="@color/colorPrimaryDark"
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
@@ -102,7 +100,6 @@
                 android:layout_toRightOf="@id/imageView"
                 android:text="Precio: "
                 android:textSize="19dp"
-                android:background="@color/colorPrimaryDark"
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
@@ -121,20 +118,6 @@
                 android:textColor="#ffffff"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
 
-            <TextView
-                android:id="@+id/textViewOtro"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/textViewPrecio1"
-                android:layout_marginLeft="5dp"
-                android:layout_toRightOf="@id/imageView"
-                android:text="..."
-                android:background="@color/black"
-                android:textColor="#ffffff"
-                android:textSize="15dp"
-                android:textStyle="bold"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
-                />
 
 
 
