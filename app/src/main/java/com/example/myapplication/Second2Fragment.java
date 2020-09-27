@@ -17,7 +17,7 @@ public class Second2Fragment extends Fragment {
             Bundle savedInstanceState
     ) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_second2, container, false);
+        return inflater.inflate(R.layout.fragment_second, container, false);
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
