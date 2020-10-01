@@ -4,8 +4,8 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:icon="@mipmap/icono_aplicacion"
+        android:roundIcon="@mipmap/icono_aplicacion_round"
         android:supportsRtl="true"
         android:theme="@style/Color">
 
@@ -17,11 +17,16 @@
         <activity
             android:name=".detalle_articulos"
             android:label="Detalle Articulos"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme">
+
+        </activity>
+
         <activity
             android:name=".list_view_articulos"
             android:label="ListViewArticulos"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme">
+
+        </activity>
         <activity
             android:name=".consulta_spinner"
             android:label="Spinner"

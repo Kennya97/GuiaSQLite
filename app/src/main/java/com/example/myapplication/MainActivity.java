@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.github.fafaldo.fabtoolbar.widget.FABToolbarLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -24,7 +25,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
 
 
@@ -47,11 +48,16 @@ Dto datos = new Dto();
 AlertDialog.Builder dialogo;
 
 
+
+private FABToolbarLayout morph;
+
+
+
 @Override
 public  boolean onKeyDown(int keyCode, KeyEvent event ) {
 if (keyCode == KeyEvent.KEYCODE_BACK) {
  new android.app.AlertDialog.Builder(this)
-.setIcon(R.drawable.ic_close)
+.setIcon(R.drawable.ic_war)
 .setTitle("Warning")
 .setMessage("¿Realmente desea salir?")
 .setNegativeButton(android.R.string.cancel, null)
@@ -97,7 +103,7 @@ toolbar.setNavigationOnClickListener(new View.OnClickListener(){
             });
 
 
-     FloatingActionButton fab = findViewById(R.id.fab);
+    /* FloatingActionButton fab = findViewById(R.id.fab);
    fab.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -107,7 +113,36 @@ toolbar.setNavigationOnClickListener(new View.OnClickListener(){
 
             ventanas.Search(MainActivity.this);
             }
-        });
+        });*/
+
+
+
+    ///PARA EL BOTON FLOTANTE
+
+    FloatingActionButton fab = findViewById(R.id.fab);
+    morph = findViewById(R.id.fabtoolbar);
+
+
+    View uno, dos, tres, cuatro,cinco, seis;
+
+    uno= findViewById(R.id.uno);
+    dos= findViewById(R.id.dos);
+    tres= findViewById(R.id.tres);
+    cuatro= findViewById(R.id.cuatro);
+    cinco= findViewById(R.id.cinco);
+    seis= findViewById(R.id.seis);
+
+    fab.setOnClickListener(this);
+    uno.setOnClickListener(this);
+    dos.setOnClickListener(this);
+    tres.setOnClickListener(this);
+    cuatro.setOnClickListener(this);
+    cinco.setOnClickListener(this);
+    seis.setOnClickListener(this);
+
+
+
+
 
         ed_cod = (EditText) findViewById(R.id.ed_cod);
         ed_des = (EditText) findViewById(R.id.ed_des);
@@ -146,7 +181,7 @@ toolbar.setNavigationOnClickListener(new View.OnClickListener(){
 private  void confirmacion (){
 String mensaje="¿Realmente desea salir?";
 dialogo = new AlertDialog.Builder(MainActivity.this);
-dialogo.setIcon(R.drawable.ic_close);
+dialogo.setIcon(R.drawable.ic_war);
 dialogo.setTitle("Warning");
 dialogo.setMessage(mensaje);
 dialogo.setCancelable(false);
@@ -401,7 +436,43 @@ dialogo.show();
                 }
             }
 
+    @Override
+    public void onClick(View v) {
+        if (v.getId()==R.id.fab){
+            morph.show();
+        }
+
+
+        switch (v.getId()){
+            case R.id.uno:
+                morph.hide();
+                break;
+
+            case R.id.dos:
+                morph.hide();
+                break;
+
+            case R.id.tres:
+                morph.hide();
+                break;
+
+            case R.id.cuatro:
+                morph.hide();
+                break;
+
+            case R.id.cinco:
+                morph.hide();
+                break;
+            case R.id.seis:
+                morph.hide();
+                break;
+
+            default:
+                morph.hide();
+                break;
+        }
     }
+}
 
 
 

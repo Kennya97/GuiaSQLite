@@ -51,6 +51,7 @@
                 app:srcCompat="@android:drawable/ic_dialog_info"
                 app:borderWidth="0dp"
                 app:fab_size="normal"
+                app:backgroundTint="@android:color/black"
                 />
 
         </RelativeLayout>
@@ -62,7 +63,8 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_alignParentBottom="true"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:background="@color/back_background">
 
 
             <ImageView
@@ -71,7 +73,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:scaleType="centerInside"
-                android:src="@drawable/listtt_foreground"
+                android:src="@drawable/save"
                 />
             <ImageView
                 android:id="@+id/dos"
@@ -79,7 +81,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:scaleType="centerInside"
-                android:src="@drawable/lit_foreground"
+                android:src="@drawable/buscar"
                 />
             <ImageView
                 android:id="@+id/tres"
@@ -87,7 +89,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:scaleType="centerInside"
-                android:src="@drawable/recy_foreground"
+                android:src="@drawable/descripcion"
                 />
             <ImageView
                 android:id="@+id/cuatro"
@@ -95,7 +97,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:scaleType="centerInside"
-                android:src="@drawable/per_foreground"
+                android:src="@drawable/borrar"
                 />
             <ImageView
                 android:id="@+id/cinco"
@@ -103,7 +105,15 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:scaleType="centerInside"
-                android:src="@drawable/back_foreground"
+                android:src="@drawable/editar"
+                />
+            <ImageView
+                android:id="@+id/seis"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                android:src="@drawable/flecha"
                 />
 
 
