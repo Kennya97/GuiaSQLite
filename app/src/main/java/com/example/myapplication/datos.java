@@ -11,7 +11,7 @@ import android.widget.EditText;
 
 public class datos extends AppCompatActivity {
     private EditText ed_cod, ed_des, ed_pre;
-    private Button guardar, concod,condes, borrar,editar;
+   // private Button guardar, concod,condes, borrar,editar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,11 +23,11 @@ public class datos extends AppCompatActivity {
         ed_cod = (EditText) findViewById(R.id.ed_cod);
         ed_des = (EditText) findViewById(R.id.ed_des);
         ed_pre = (EditText) findViewById(R.id.ed_pre);
-        guardar = (Button) findViewById(R.id.guardar);
+       /* guardar = (Button) findViewById(R.id.guardar);
         concod = (Button) findViewById(R.id.concod);
         condes = (Button) findViewById(R.id.condes);
         borrar = (Button) findViewById(R.id.borrar);
-        editar = (Button) findViewById(R.id.editar);
+        editar = (Button) findViewById(R.id.editar);*/
 
     }
 

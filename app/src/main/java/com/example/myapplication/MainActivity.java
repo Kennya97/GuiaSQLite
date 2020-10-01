@@ -13,14 +13,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.preference.DialogPreference;
+import android.view.Gravity;
 import android.view.KeyEvent;
+import android.view.LayoutInflater;
 import android.view.View;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -147,11 +151,11 @@ toolbar.setNavigationOnClickListener(new View.OnClickListener(){
         ed_cod = (EditText) findViewById(R.id.ed_cod);
         ed_des = (EditText) findViewById(R.id.ed_des);
         ed_pre = (EditText) findViewById(R.id.ed_pre);
-        guardar = (Button) findViewById(R.id.guardar);
+       /* guardar = (Button) findViewById(R.id.guardar);
         concod = (Button) findViewById(R.id.concod);
         condes = (Button) findViewById(R.id.condes);
         borrar = (Button) findViewById(R.id.borrar);
-        editar = (Button) findViewById(R.id.editar);
+        editar = (Button) findViewById(R.id.editar);*/
 
         String senal ="";
         String codigo ="";
@@ -436,33 +440,90 @@ dialogo.show();
                 }
             }
 
+
+
+//PARA EL TOAST
+
+            public void showToast(int opcion, String message){
+
+
+                LayoutInflater inflater = getLayoutInflater();
+                View layout = inflater.inflate(R.layout.toast_layout, (ViewGroup) findViewById(R.id.toast_root));
+
+
+                TextView toastText = layout.findViewById(R.id.toas_text);
+                ImageView toastImage =layout.findViewById(R.id.toast_image);
+
+                toastText.setText(message);
+
+                if (opcion==1){
+             toastImage.setImageResource(R.drawable.save);
+                }else if(opcion==2){
+                    toastImage.setImageResource(R.drawable.buscar);
+
+                }else if (opcion==3){
+                    toastImage.setImageResource(R.drawable.descripcion);
+
+                }else if(opcion==4){
+                    toastImage.setImageResource(R.drawable.borrar);
+                }else if(opcion==5){
+
+                    toastImage.setImageResource(R.drawable.editar);
+                }
+
+
+                Toast toast = new Toast(getApplicationContext());
+                toast.setGravity(Gravity.CENTER, 0, 0);
+                toast.setDuration(Toast.LENGTH_SHORT);
+                toast.setView(layout);
+                toast.show();
+
+            }
+
+
+
+
+
+
     @Override
     public void onClick(View v) {
         if (v.getId()==R.id.fab){
+
             morph.show();
         }
 
 
         switch (v.getId()){
             case R.id.uno:
-                morph.hide();
+                alta(null);
+                showToast(1,"OPCIÓN GUARDAR");
+                //morph.hide();
                 break;
 
             case R.id.dos:
-                morph.hide();
+                showToast(2,"OPCIÓN BUSCAR POR CÓDIGO");
+                ventanas.Search(MainActivity.this);
+                //morph.hide();
                 break;
 
             case R.id.tres:
-                morph.hide();
+                consultapordescripcion(null);
+                showToast(3,"OPCIÓN BUSCAR POR DESCRIPCIÓN");
+               // morph.hide();
                 break;
 
             case R.id.cuatro:
-                morph.hide();
+                bajaporcodigo(null);
+                showToast(4,"OPCIÓN BORRAR");
+                //morph.hide();
                 break;
 
             case R.id.cinco:
-                morph.hide();
+                modificacion(null);
+                showToast(5,"OPCIÓN EDITAR");
+               // morph.hide();
                 break;
+
             case R.id.seis:
                 morph.hide();
                 break;
