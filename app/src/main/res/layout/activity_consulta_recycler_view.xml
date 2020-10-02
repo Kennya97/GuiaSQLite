@@ -17,4 +17,76 @@
         />
 
 
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/fab_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="end|bottom"
+        app:menu_icon="@drawable/ic_favorito"
+        app:menu_backgroundColor="#6FFF9BF1"
+        app:menu_shadowColor="@color/back_background"
+        android:outlineAmbientShadowColor="@color/back_background"
+        app:menu_colorNormal="@color/back_background"
+
+        >
+
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/item1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_size="mini"
+            android:src="@drawable/volver"
+            app:fab_label="Volver"
+            app:fab_colorNormal="@color/back_background"
+
+            />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/item2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_size="mini"
+            android:src="@drawable/liss"
+            app:fab_label="Lista Spinner"
+            app:fab_colorNormal="@color/back_background"
+
+            />
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/item3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_size="mini"
+            android:src="@drawable/ly"
+            app:fab_label="ListView"
+            app:fab_colorNormal="@color/back_background"
+
+            />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/item4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_size="mini"
+            android:src="@drawable/re"
+            app:fab_label="Recyler View"
+            app:fab_colorNormal="@color/back_background"
+
+            />
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/item5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_size="mini"
+            android:src="@drawable/persona"
+            app:fab_label="Datos"
+            app:fab_colorNormal="@color/back_background"
+
+            />
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

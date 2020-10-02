@@ -8,6 +8,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
+
+import com.github.clans.fab.FloatingActionButton;
+import com.github.clans.fab.FloatingActionMenu;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,11 +25,103 @@ public class consulta_recyclerView extends AppCompatActivity {
     ConexionSQLite datos = new ConexionSQLite(consulta_recyclerView.this);
 
 
+    private FloatingActionMenu menu;
+    private FloatingActionButton item1, item2,item3,item4, item5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_consulta_recycler_view);
+
+
+
+        menu =  findViewById(R.id.fab_menu);
+        item1=findViewById(R.id.item1);
+        item2=findViewById(R.id.item2);
+        item3=findViewById(R.id.item3);
+        item4=findViewById(R.id.item4);
+        item5=findViewById(R.id.item5);
+
+
+        menu.setOnMenuToggleListener(new FloatingActionMenu.OnMenuToggleListener() {
+            @Override
+            public void onMenuToggle(boolean opened) {
+                if (opened){
+                    Toast.makeText(consulta_recyclerView.this, "Menú Abierto", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(consulta_recyclerView.this, "Menú Cerrado", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+/*
+menu.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+if (menu.isOpened()){
+    menu.close(true);
+}
+    }
+});
+*/
+
+
+
+        item1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+                Intent intent = new Intent(consulta_recyclerView.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        item2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+                Intent intent = new Intent(consulta_recyclerView.this, consulta_spinner.class);
+                startActivity(intent);
+            }
+        });
+
+        item3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+                Intent intent = new Intent(consulta_recyclerView.this,list_view_articulos.class);
+                startActivity(intent);
+            }
+        });
+
+        item4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+                Intent intent = new Intent(consulta_recyclerView.this, consulta_recyclerView.class);
+                startActivity(intent);
+            }
+        });
+
+        item5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+                Intent intent = new Intent(consulta_recyclerView.this, datos.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
+
+
+
+
+
+
 
         recycler_view = (RecyclerView)findViewById(R.id.recycler_view);
 

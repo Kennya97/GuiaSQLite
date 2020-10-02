@@ -16,10 +16,10 @@ import com.github.clans.fab.FloatingActionMenu;
 
 public class datos extends AppCompatActivity {
     private EditText ed_cod, ed_des, ed_pre;
-   // private Button guardar, concod,condes, borrar,editar;
+
 
     private FloatingActionMenu menu;
-    private FloatingActionButton item1, item2,item3,item4;
+    private FloatingActionButton item1, item2,item3,item4, item5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,26 +30,22 @@ public class datos extends AppCompatActivity {
         ed_cod = (EditText) findViewById(R.id.ed_cod);
         ed_des = (EditText) findViewById(R.id.ed_des);
         ed_pre = (EditText) findViewById(R.id.ed_pre);
-       /* guardar = (Button) findViewById(R.id.guardar);
-        concod = (Button) findViewById(R.id.concod);
-        condes = (Button) findViewById(R.id.condes);
-        borrar = (Button) findViewById(R.id.borrar);
-        editar = (Button) findViewById(R.id.editar);*/
 
 
-        menu = findViewById(R.id.fab_menu);
-        item1 = findViewById(R.id.item1);
-        item2 = findViewById(R.id.item2);
-        item3 = findViewById(R.id.item3);
-        item4 = findViewById(R.id.item4);
+        menu =  findViewById(R.id.fab_menu);
+        item1=findViewById(R.id.item1);
+        item2=findViewById(R.id.item2);
+        item3=findViewById(R.id.item3);
+        item4=findViewById(R.id.item4);
+        item5=findViewById(R.id.item5);
 
 
         menu.setOnMenuToggleListener(new FloatingActionMenu.OnMenuToggleListener() {
             @Override
             public void onMenuToggle(boolean opened) {
-                if (opened) {
+                if (opened){
                     Toast.makeText(datos.this, "Menú Abierto", Toast.LENGTH_SHORT).show();
-                } else {
+                }else{
                     Toast.makeText(datos.this, "Menú Cerrado", Toast.LENGTH_SHORT).show();
                 }
             }
@@ -65,6 +61,7 @@ if (menu.isOpened()){
     }
 });
 */
+
 
 
         item1.setOnClickListener(new View.OnClickListener() {
@@ -90,12 +87,21 @@ if (menu.isOpened()){
             @Override
             public void onClick(View view) {
                 finish();
-                Intent intent = new Intent(datos.this, consulta_recyclerView.class);
+                Intent intent = new Intent(datos.this,list_view_articulos.class);
                 startActivity(intent);
             }
         });
 
         item4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+                Intent intent = new Intent(datos.this, consulta_recyclerView.class);
+                startActivity(intent);
+            }
+        });
+
+        item5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
@@ -105,11 +111,16 @@ if (menu.isOpened()){
         });
 
 
+
+
+
+
+
+
     }
 
 
-
-    @Override
+   /* @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
@@ -125,7 +136,7 @@ if (menu.isOpened()){
             ed_des.setText(null);
             ed_pre.setText(null);
             return true;
-        }else */
+        }else
 
         if(id==R.id.volver) {
             Intent spinnerActivity = new Intent(datos.this, MainActivity.class);
@@ -172,5 +183,5 @@ if (menu.isOpened()){
 
 
         return super.onOptionsItemSelected(item);
-    }
+    }*/
     }

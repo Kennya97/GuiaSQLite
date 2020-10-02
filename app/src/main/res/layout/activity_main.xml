@@ -51,7 +51,7 @@
                 app:srcCompat="@drawable/ab_foreground"
                 app:borderWidth="0dp"
                 app:fab_size="normal"
-                app:backgroundTint="#FA2424"
+                app:backgroundTint="#090808"
                 />
 
         </RelativeLayout>

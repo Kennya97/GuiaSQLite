@@ -11,20 +11,20 @@
 
         <activity android:name=".consulta_recyclerView"
             android:label="RecyclerView"
-            android:theme="@style/AppTheme">
+            android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
         <activity
             android:name=".detalle_articulos"
             android:label="Detalle Articulos"
-            android:theme="@style/AppTheme">
+            android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
 
         <activity
             android:name=".list_view_articulos"
             android:label="ListViewArticulos"
-            android:theme="@style/AppTheme">
+            android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
         <activity
@@ -34,7 +34,7 @@
         <activity
             android:name=".datos"
             android:label="Mis datos"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".MainActivity"
             android:label="Guia SQLite SIS21A"

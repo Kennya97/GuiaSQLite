@@ -150,9 +150,10 @@
         android:layout_height="match_parent"
         android:layout_gravity="end|bottom"
         app:menu_icon="@drawable/ic_favorito"
-        app:menu_backgroundColor="@color/back_background"
+        app:menu_backgroundColor="#A6FFD3F9"
         app:menu_shadowColor="@color/back_background"
         android:outlineAmbientShadowColor="@color/back_background"
+        app:menu_colorNormal="@color/back_background"
 
         >
 
@@ -164,6 +165,7 @@
             app:fab_size="mini"
             android:src="@drawable/volver"
             app:fab_label="Volver"
+            app:fab_colorNormal="@color/back_background"
 
             />
 
@@ -174,6 +176,7 @@
             app:fab_size="mini"
             android:src="@drawable/liss"
             app:fab_label="Lista Spinner"
+            app:fab_colorNormal="@color/back_background"
 
             />
         <com.github.clans.fab.FloatingActionButton
@@ -183,6 +186,7 @@
             app:fab_size="mini"
             android:src="@drawable/ly"
             app:fab_label="ListView"
+            app:fab_colorNormal="@color/back_background"
 
             />
 
@@ -193,6 +197,7 @@
             app:fab_size="mini"
             android:src="@drawable/re"
             app:fab_label="Recyler View"
+            app:fab_colorNormal="@color/back_background"
 
             />
         <com.github.clans.fab.FloatingActionButton
@@ -201,7 +206,8 @@
             android:layout_height="wrap_content"
             app:fab_size="mini"
             android:src="@drawable/persona"
-            app:fab_label="Persona"
+            app:fab_label="Datos"
+           app:fab_colorNormal="@color/back_background"
 
             />
 
