@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@drawable/mi_fondo"
+    android:background="@drawable/fondoinicio"
     tools:context=".datos">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -69,4 +72,76 @@
         android:layout_marginTop="15dp"
         app:srcCompat="@mipmap/nuev_foreground" />
 
-</LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/fab_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="end|bottom"
+        app:menu_icon="@drawable/ic_favorito"
+        app:menu_backgroundColor="@color/back_background"
+        app:menu_shadowColor="@color/back_background"
+        android:outlineAmbientShadowColor="@color/back_background"
+
+        >
+
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/item1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_size="mini"
+            android:src="@drawable/volver"
+            app:fab_label="Volver"
+
+            />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/item2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_size="mini"
+            android:src="@drawable/liss"
+            app:fab_label="Lista Spinner"
+
+            />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/item3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_size="mini"
+            android:src="@drawable/re"
+            app:fab_label="Recyler View"
+
+            />
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/item4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_size="mini"
+            android:src="@drawable/persona"
+            app:fab_label="Persona"
+
+            />
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+
+
+
+
+
+
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

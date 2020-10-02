@@ -257,7 +257,7 @@ public class ConexionSQLite extends SQLiteOpenHelper {
                 datos.setPrecio(Double.parseDouble(fila.getString(2)));
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
-                builder.setIcon(R.drawable.ic_delete);
+                builder.setIcon(R.drawable.ic_war);
                 builder.setTitle("Warning");
                 builder.setMessage("¿Esta seguro de borrar el registro? \n Código:" + datos.getCodigo() + " \nDescripción: " + datos.getDescripcion());
                 builder.setCancelable(false);

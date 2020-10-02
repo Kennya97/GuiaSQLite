@@ -6,18 +6,25 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import com.github.clans.fab.FloatingActionButton;
+import com.github.clans.fab.FloatingActionMenu;
 
 public class datos extends AppCompatActivity {
     private EditText ed_cod, ed_des, ed_pre;
    // private Button guardar, concod,condes, borrar,editar;
 
+    private FloatingActionMenu menu;
+    private FloatingActionButton item1, item2,item3,item4;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_datos);
-
 
 
         ed_cod = (EditText) findViewById(R.id.ed_cod);
@@ -29,7 +36,77 @@ public class datos extends AppCompatActivity {
         borrar = (Button) findViewById(R.id.borrar);
         editar = (Button) findViewById(R.id.editar);*/
 
+
+        menu = findViewById(R.id.fab_menu);
+        item1 = findViewById(R.id.item1);
+        item2 = findViewById(R.id.item2);
+        item3 = findViewById(R.id.item3);
+        item4 = findViewById(R.id.item4);
+
+
+        menu.setOnMenuToggleListener(new FloatingActionMenu.OnMenuToggleListener() {
+            @Override
+            public void onMenuToggle(boolean opened) {
+                if (opened) {
+                    Toast.makeText(datos.this, "Menú Abierto", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(datos.this, "Menú Cerrado", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+/*
+menu.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+if (menu.isOpened()){
+    menu.close(true);
+}
     }
+});
+*/
+
+
+        item1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+                Intent intent = new Intent(datos.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        item2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+                Intent intent = new Intent(datos.this, consulta_spinner.class);
+                startActivity(intent);
+            }
+        });
+
+        item3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+                Intent intent = new Intent(datos.this, consulta_recyclerView.class);
+                startActivity(intent);
+            }
+        });
+
+        item4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+                Intent intent = new Intent(datos.this, datos.class);
+                startActivity(intent);
+            }
+        });
+
+
+    }
+
 
 
     @Override

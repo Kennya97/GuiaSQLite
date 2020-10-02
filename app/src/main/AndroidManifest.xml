@@ -30,7 +30,7 @@
         <activity
             android:name=".consulta_spinner"
             android:label="Spinner"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".datos"
             android:label="Mis datos"

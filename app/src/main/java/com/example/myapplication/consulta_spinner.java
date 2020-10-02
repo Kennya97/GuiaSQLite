@@ -14,17 +14,23 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.github.clans.fab.FloatingActionButton;
+import com.github.clans.fab.FloatingActionMenu;
 
 public class consulta_spinner extends AppCompatActivity {
 
-  //  private EditText ed_cod, ed_des, ed_pre;
-    //private Button guardar, concod, condes, borrar, editar;
     private Spinner sp_options;
     private TextView tv_cod, tv_descripcion, tv_precio;
 
 
     ConexionSQLite conexion = new ConexionSQLite(this);
     Dto datos = new Dto();
+
+private FloatingActionMenu menu;
+private FloatingActionButton item1, item2,item3,item4, item5;
+
 
 
     @Override
@@ -36,6 +42,90 @@ public class consulta_spinner extends AppCompatActivity {
         tv_cod = (TextView) findViewById(R.id.tv_cod);
         tv_descripcion = (TextView) findViewById(R.id.tv_descripcion);
         tv_precio = (TextView) findViewById(R.id.tv_precio);
+
+        menu =  findViewById(R.id.fab_menu);
+        item1=findViewById(R.id.item1);
+        item2=findViewById(R.id.item2);
+        item3=findViewById(R.id.item3);
+        item4=findViewById(R.id.item4);
+        item5=findViewById(R.id.item5);
+
+
+menu.setOnMenuToggleListener(new FloatingActionMenu.OnMenuToggleListener() {
+@Override
+public void onMenuToggle(boolean opened) {
+if (opened){
+Toast.makeText(consulta_spinner.this, "Menú Abierto", Toast.LENGTH_SHORT).show();
+}else{
+Toast.makeText(consulta_spinner.this, "Menú Cerrado", Toast.LENGTH_SHORT).show();
+}
+}
+});
+
+/*
+menu.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+if (menu.isOpened()){
+    menu.close(true);
+}
+    }
+});
+*/
+
+
+
+item1.setOnClickListener(new View.OnClickListener() {
+@Override
+public void onClick(View v) {
+finish();
+Intent intent = new Intent(consulta_spinner.this, MainActivity.class);
+startActivity(intent);
+}
+});
+
+
+        item2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+                Intent intent = new Intent(consulta_spinner.this, consulta_spinner.class);
+                startActivity(intent);
+            }
+        });
+
+        item3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+                Intent intent = new Intent(consulta_spinner.this,list_view_articulos.class);
+                startActivity(intent);
+            }
+        });
+
+        item4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+                Intent intent = new Intent(consulta_spinner.this, consulta_recyclerView.class);
+                startActivity(intent);
+            }
+        });
+
+        item5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+                Intent intent = new Intent(consulta_spinner.this, datos.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
+
+
 
         conexion.consultaListaArticulos();
 
@@ -68,7 +158,7 @@ public class consulta_spinner extends AppCompatActivity {
     }
 
 
-
+/*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -87,7 +177,7 @@ public class consulta_spinner extends AppCompatActivity {
             return true;
         }else */
 
-        if(id==R.id.volver) {
+    /*    if(id==R.id.volver) {
             Intent spinnerActivity = new Intent(consulta_spinner.this, MainActivity.class);
             startActivity(spinnerActivity);
             return true;
@@ -134,5 +224,5 @@ public class consulta_spinner extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-
+*/
 }

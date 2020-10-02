@@ -88,7 +88,7 @@ return super.onKeyDown(keyCode, event);
         Toolbar toolbar = findViewById(R.id.toolbar);
 
         toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_apagado));
-        toolbar.setTitleTextColor(getResources().getColor(R.color.mycolor));
+        toolbar.setTitleTextColor(getResources().getColor(R.color.rojo));
         toolbar.setTitleMargin(0,0,0,0);
        // toolbar.setSubtitle("CRUD SQLite");
         toolbar.setSubtitleTextColor(getResources().getColor(R.color.mycolor));
@@ -497,31 +497,31 @@ dialogo.show();
             case R.id.uno:
                 alta(null);
                 showToast(1,"OPCIÓN GUARDAR");
-                //morph.hide();
+                morph.hide();
                 break;
 
             case R.id.dos:
                 showToast(2,"OPCIÓN BUSCAR POR CÓDIGO");
                 ventanas.Search(MainActivity.this);
-                //morph.hide();
+                morph.hide();
                 break;
 
             case R.id.tres:
                 consultapordescripcion(null);
                 showToast(3,"OPCIÓN BUSCAR POR DESCRIPCIÓN");
-               // morph.hide();
+               morph.hide();
                 break;
 
             case R.id.cuatro:
                 bajaporcodigo(null);
                 showToast(4,"OPCIÓN BORRAR");
-                //morph.hide();
+                morph.hide();
                 break;
 
             case R.id.cinco:
                 modificacion(null);
                 showToast(5,"OPCIÓN EDITAR");
-               // morph.hide();
+                morph.hide();
                 break;
 
             case R.id.seis:

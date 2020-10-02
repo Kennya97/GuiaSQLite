@@ -48,10 +48,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|end"
-                app:srcCompat="@android:drawable/ic_dialog_info"
+                app:srcCompat="@drawable/ab_foreground"
                 app:borderWidth="0dp"
                 app:fab_size="normal"
-                app:backgroundTint="@android:color/black"
+                app:backgroundTint="#FA2424"
                 />
 
         </RelativeLayout>
